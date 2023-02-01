@@ -1,0 +1,21 @@
+.btn.uno::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: .3s ease-in-out all;
+}
+
+.btn.uno:hover::after {
+    transform: scale(200);
+    background-color: #ff461d;
+}
+
+.btn.uno:hover {
+    background-color: #ff461db9;
+    
+}
+
