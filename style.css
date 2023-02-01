@@ -1,13 +1,24 @@
 :root {
-    --color-primario: #ff5733;
+    --color-primario: #ff5f3b;
     /* --color-secundario: #  */
 }
 
+:root {
+    --font: "fontAwensome, Regular" , sans-Serif ;}
+
+@font-face {
+    font-family: var(--font);
+    src: url(./font/fontawesome-webfont.ttf);
+}
+
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: "Font Awensome", sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: "Font Awensome", sans-serif; */
+    font-family: var(--font);   
     margin: 0;
+
 }
  .container {
     min-width: 100%;
@@ -31,7 +42,7 @@ header {
 header #aulaideal {
     font-size: 1rem;
     list-style: none;
-    padding: 1rem;
+    padding: 12px;
     color: white;
 }
 
@@ -52,8 +63,8 @@ header #aulaideal {
 
 #menu ul li {
     display: flex;
-    margin: 12px 1rem;
     padding: 15px 1rem;
+    margin: 9px 1rem;
     text-align: center;
     align-items: center;
     color: white;
@@ -80,30 +91,28 @@ header #aulaideal {
     padding-top: 12rem;
 }
 
-#container h3 {
+#container #title-h3 {
     font-size: 4rem;
     font-weight: 0;
     margin-top: 1rem;
 }
 
-#container h4 {
+#container #title-h2 {
     font-size: 25px;
-    margin-bottom: 0px;
+    margin-bottom: 4px;
 }
 
 .btn {
     display: inline-flex;
-    font-size: 15px;
-    padding: 16px;
+    font-size: 17px;
+    padding: 18px 20px;
     background-color: var(--color-primario);
     border: none;
     cursor: pointer;
     transition: .3s ease;
     border-radius: 3px;
     color: white;
-    transform: .3s ease all;
-    position: relative;
-    overflow: hidden;
+    margin-top: 30px;
 }   
 
 .btn:hover {
@@ -112,9 +121,68 @@ header #aulaideal {
 
 /* QUIENES SOMOS */
 
-#img-nosotros {
-    width: 150px;
-    display: inli;
-    text-align: center;
+#section-container {
+    align-items: center;
 }
 
+#div-nosotros {
+    text-align: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+#img-nosotros {
+    width: 200px;
+}
+
+#container-2 {
+    padding: 0 23%;
+    text-align: center;
+    background-color: var(--color-primario);
+    padding: 0 0 30px;
+}
+
+#section-container-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+#container-text .text {
+    font-size: 40px;
+}
+
+#btn-info {
+    font-size: 18px;
+    width: 250px;
+    height: 55px;
+    background-color: white;
+    border-radius: 3px;
+    border: none;
+
+}
+
+#servicios {
+    text-align: center;
+    margin: 40px;
+    font-size: 2rem;
+}
+
+#container-cards-info {
+    display: flex;
+}
+
+.cards-info {
+    text-align: center;
+    align-items: center;
+}
+
+.cards-info span {
+font-size: 24px;    
+}
+
+/* #container-servicios {
+    margin-top: 30px;
+    background-color: white;
+} */
