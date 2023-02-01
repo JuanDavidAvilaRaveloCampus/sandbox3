@@ -1,5 +1,5 @@
 :root {
-    --color-primario: #ff5f3b;
+    --color-primario: #f05f40;
     /* --color-secundario: #  */
 }
 
@@ -36,7 +36,7 @@ header {
     text-decoration: none;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.55);
-    
+    transition: 3.25s ease all;
 }
 
 header #aulaideal {
@@ -70,13 +70,14 @@ header #aulaideal {
     color: white;
     border-radius: 1px;
     font-size: 20px;
-    transition: .2s ease-in-out;
-    border: none;
+    transition: .3s ease all;
+    /* border: none; */
 }
 
 #menu ul li:hover {
     cursor: pointer;
     background-color: var(--color-primario);
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 #container {
@@ -91,10 +92,10 @@ header #aulaideal {
     padding-top: 12rem;
 }
 
-#container #title-h3 {
+#container #typed {
     font-size: 4rem;
-    font-weight: 0;
     margin-top: 1rem;
+    font-style: normal;
 }
 
 #container #title-h2 {
@@ -117,6 +118,7 @@ header #aulaideal {
 
 .btn:hover {
     background-color: #d34626;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 /* QUIENES SOMOS */
@@ -136,10 +138,9 @@ header #aulaideal {
 }
 
 #container-2 {
-    padding: 0 23%;
+    padding: 0 23% 60px;
     text-align: center;
     background-color: var(--color-primario);
-    padding: 0 0 30px;
 }
 
 #section-container-2 {
@@ -160,20 +161,31 @@ header #aulaideal {
     background-color: white;
     border-radius: 3px;
     border: none;
+    transition: .3s ease all;
 
+}
+
+#btn-info:hover {
+    background-color: #efefef;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 #servicios {
     text-align: center;
     margin: 40px;
-    font-size: 2rem;
+    font-size: 35px;
 }
 
 #container-cards-info {
     display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .cards-info {
+    width: 300px;
+    padding: 0 100px;
+    margin: 3rem;
     text-align: center;
     align-items: center;
 }
@@ -182,7 +194,36 @@ header #aulaideal {
 font-size: 24px;    
 }
 
-/* #container-servicios {
-    margin-top: 30px;
-    background-color: white;
-} */
+#container-proyectos {
+    background-color: #424141;
+}
+
+
+#title-proyectos {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    padding: 3rem;  
+}
+
+#container-img-proyectos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.img-proyect {
+    width: 400px;
+    margin: 1rem;
+}
+
+footer {
+    background-color: #222;
+    width: 100%;
+    height: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
