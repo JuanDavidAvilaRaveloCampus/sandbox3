@@ -4,39 +4,77 @@
 }
 
 :root {
-    --font: "fontAwensome, Regular" , sans-Serif ;}
+    --font: "fontAwensome, Regular", sans-Serif;
+}
 
 @font-face {
     font-family: var(--font);
     src: url(./font/fontawesome-webfont.ttf);
 }
 
+/* KEYFRAMES */
+
+/* MOVIMIENTO FIJO */
+@keyframes wiggle {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
 
 body {
     /* font-family: 'Montserrat', sans-serif; */
     /* font-family: 'Open Sans', sans-serif; */
     /* font-family: "Font Awensome", sans-serif; */
-    font-family: var(--font);   
+    font-family: var(--font);
     margin: 0;
 
 }
- .container {
+
+.container {
     min-width: 100%;
     height: 100vh;
     background-image: url(./img/fondo-bienvenido-grande.jpg);
-    background-repeat: no-repeat ;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
+/* EXPLOTACIÓN LABORAL */
 header {
-    margin: 0;
     width: 100%;
     display: flex;
     position: fixed;
     text-decoration: none;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.55);
-    transition: 3.25s ease all;
+    transition: .7s ease all;
+    z-index: 10;
 }
 
 header #aulaideal {
@@ -49,17 +87,15 @@ header #aulaideal {
 .link {
     text-decoration: none;
     color: white;
+    transition: .2s ease all;
 }
 
-
-#menu ul{
+#menu ul {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
 }
-
-
 
 #menu ul li {
     display: flex;
@@ -80,9 +116,14 @@ header #aulaideal {
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
+li:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
 #container {
     height: 50vh;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,11 +155,15 @@ header #aulaideal {
     border-radius: 3px;
     color: white;
     margin-top: 30px;
-}   
+}
 
 .btn:hover {
     background-color: #d34626;
+}
+
+button:hover {
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
 }
 
 /* QUIENES SOMOS */
@@ -135,7 +180,15 @@ header #aulaideal {
 
 #img-nosotros {
     width: 200px;
+    animation-name: wiggle;
+    animation-delay: .025s;
 }
+
+#img-nosotros:hover {
+    animation: wiggle 2s linear infinite;
+}
+
+/* NUESTROS SERVICIOS */
 
 #container-2 {
     padding: 0 23% 60px;
@@ -177,22 +230,39 @@ header #aulaideal {
 }
 
 #container-cards-info {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.fa-solid {
+    font-size: 5rem;
+    margin: 0 2rem 1rem;
+    color: var(--color-primario);
+}
+
+.fa-solid:hover {
+    animation: wiggle 2s linear infinite;
 }
 
 .cards-info {
     width: 300px;
-    padding: 0 100px;
+    padding: 0 50px;
     margin: 3rem;
     text-align: center;
     align-items: center;
+    transition: .2s ease all;
+}
+
+.cards-info:hover {
+    transform: scale(1.1);
 }
 
 .cards-info span {
-font-size: 24px;    
+    font-size: 24px;
 }
+
+/* ULTIMOS PROYECTOS */
 
 #container-proyectos {
     background-color: #424141;
@@ -203,7 +273,7 @@ font-size: 24px;
     text-align: center;
     font-size: 3rem;
     color: white;
-    padding: 3rem;  
+    padding: 3rem;
 }
 
 #container-img-proyectos {
@@ -216,6 +286,37 @@ font-size: 24px;
 .img-proyect {
     width: 400px;
     margin: 1rem;
+    transition: .2s ease all;
+}
+
+#img-1 {
+    background-color: #cbb1a2;
+}
+
+#img-2 {
+    background-color: #1fa3b5;
+}
+
+#img-3 {
+    background-color: #b94c62;
+}
+
+#img-4 {
+    background-color: #1037b4;
+}
+
+#img-5 {
+    background-color: #130f0f;
+}
+
+#img-6 {
+    background-color: #1d82c0;
+}
+
+.img-proyect:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+
 }
 
 footer {
